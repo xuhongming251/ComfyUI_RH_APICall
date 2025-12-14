@@ -1,0 +1,2224 @@
+{
+  "id": "9c66f556-4c36-4c41-91a6-845839d1290e",
+  "revision": 0,
+  "last_node_id": 100,
+  "last_link_id": 150,
+  "nodes": [
+    {
+      "id": 8,
+      "type": "JWImageResizeByLongerSide",
+      "pos": [
+        1718.5078588230492,
+        525.3737828881737
+      ],
+      "size": [
+        283.5611267089844,
+        82
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-various",
+        "ver": "5bd85aaf7616878471469c4ec7e11bbd0cef3bf2",
+        "Node name for S&R": "JWImageResizeByLongerSide"
+      },
+      "widgets_values": [
+        1024,
+        "bicubic"
+      ]
+    },
+    {
+      "id": 49,
+      "type": "LoadImage",
+      "pos": [
+        1360.241008934687,
+        1127.1079438652787
+      ],
+      "size": [
+        271.5713051025389,
+        430.6579455444472
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            76
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "0.webp",
+        "image"
+      ]
+    },
+    {
+      "id": 50,
+      "type": "JWImageResizeByLongerSide",
+      "pos": [
+        1678.9955557824994,
+        1135.3683362139552
+      ],
+      "size": [
+        283.5611267089844,
+        82
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 76
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            79
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-various",
+        "ver": "5bd85aaf7616878471469c4ec7e11bbd0cef3bf2",
+        "Node name for S&R": "JWImageResizeByLongerSide"
+      },
+      "widgets_values": [
+        1024,
+        "bicubic"
+      ]
+    },
+    {
+      "id": 52,
+      "type": "RH_ImageUploaderNode",
+      "pos": [
+        1691.1005037195828,
+        1272.9026482237414
+      ],
+      "size": [
+        229.20001220703125,
+        46
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "apiConfig",
+          "name": "apiConfig",
+          "type": "STRUCT",
+          "link": 89
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 79
+        }
+      ],
+      "outputs": [
+        {
+          "label": "filename",
+          "name": "filename",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            77
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "f0f16c02a2fd8ee80a84a4233713e1fb2f7c516c",
+        "Node name for S&R": "RH_ImageUploaderNode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 51,
+      "type": "RH_NodeInfoListNode",
+      "pos": [
+        1689.455504306513,
+        1385.3265886300665
+      ],
+      "size": [
+        215.1985321044922,
+        106
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "previousNodeInfoList",
+          "name": "previousNodeInfoList",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "label": "fieldValue",
+          "name": "fieldValue",
+          "type": "STRING",
+          "widget": {
+            "name": "fieldValue"
+          },
+          "link": 77
+        }
+      ],
+      "outputs": [
+        {
+          "label": "ARRAY",
+          "name": "ARRAY",
+          "type": "ARRAY",
+          "links": [
+            91
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "f0f16c02a2fd8ee80a84a4233713e1fb2f7c516c",
+        "Node name for S&R": "RH_NodeInfoListNode"
+      },
+      "widgets_values": [
+        2,
+        "image",
+        "18"
+      ]
+    },
+    {
+      "id": 60,
+      "type": "RH_NodeInfoListNode",
+      "pos": [
+        2105.572559578921,
+        1792.0268847324198
+      ],
+      "size": [
+        215.1985321044922,
+        106
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "previousNodeInfoList",
+          "name": "previousNodeInfoList",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "label": "fieldValue",
+          "name": "fieldValue",
+          "type": "STRING",
+          "widget": {
+            "name": "fieldValue"
+          },
+          "link": 95
+        }
+      ],
+      "outputs": [
+        {
+          "label": "ARRAY",
+          "name": "ARRAY",
+          "type": "ARRAY",
+          "links": [
+            101
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "f0f16c02a2fd8ee80a84a4233713e1fb2f7c516c",
+        "Node name for S&R": "RH_NodeInfoListNode"
+      },
+      "widgets_values": [
+        12,
+        "image",
+        "18"
+      ]
+    },
+    {
+      "id": 64,
+      "type": "RH_NodeInfoListNode",
+      "pos": [
+        2105.83918339916,
+        1957.3006436866326
+      ],
+      "size": [
+        215.1985321044922,
+        106
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "previousNodeInfoList",
+          "name": "previousNodeInfoList",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": 101
+        },
+        {
+          "label": "fieldValue",
+          "name": "fieldValue",
+          "type": "STRING",
+          "widget": {
+            "name": "fieldValue"
+          },
+          "link": 103
+        }
+      ],
+      "outputs": [
+        {
+          "label": "ARRAY",
+          "name": "ARRAY",
+          "type": "ARRAY",
+          "links": [
+            102
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "f0f16c02a2fd8ee80a84a4233713e1fb2f7c516c",
+        "Node name for S&R": "RH_NodeInfoListNode"
+      },
+      "widgets_values": [
+        22,
+        "text",
+        "18"
+      ]
+    },
+    {
+      "id": 63,
+      "type": "LoadImage",
+      "pos": [
+        1367.9957393796574,
+        1692.5173562618932
+      ],
+      "size": [
+        271.5713051025389,
+        430.6579455444472
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            94
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "0.webp",
+        "image"
+      ]
+    },
+    {
+      "id": 65,
+      "type": "TextInput_",
+      "pos": [
+        1677.4331927604603,
+        1932.5643575894085
+      ],
+      "size": [
+        372.5212782806584,
+        166.60961450940613
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            103
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-mixlab-nodes",
+        "ver": "b2bb1876def6330fccf1e03cc69d2166cae7bedb",
+        "Node name for S&R": "TextInput_"
+      },
+      "widgets_values": [
+        "让人物变成正面照片",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 62,
+      "type": "RH_ImageUploaderNode",
+      "pos": [
+        2076.224473886319,
+        1684.9510139069805
+      ],
+      "size": [
+        229.20001220703125,
+        46
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "apiConfig",
+          "name": "apiConfig",
+          "type": "STRUCT",
+          "link": 97
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 98
+        }
+      ],
+      "outputs": [
+        {
+          "label": "filename",
+          "name": "filename",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            95
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "f0f16c02a2fd8ee80a84a4233713e1fb2f7c516c",
+        "Node name for S&R": "RH_ImageUploaderNode"
+      }
+    },
+    {
+      "id": 79,
+      "type": "RH_NodeInfoListNode",
+      "pos": [
+        1920.485448607927,
+        2346.8718015191553
+      ],
+      "size": [
+        215.1985321044922,
+        106
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "previousNodeInfoList",
+          "name": "previousNodeInfoList",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "label": "fieldValue",
+          "name": "fieldValue",
+          "type": "STRING",
+          "widget": {
+            "name": "fieldValue"
+          },
+          "link": 116
+        }
+      ],
+      "outputs": [
+        {
+          "label": "ARRAY",
+          "name": "ARRAY",
+          "type": "ARRAY",
+          "links": [
+            117
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "f0f16c02a2fd8ee80a84a4233713e1fb2f7c516c",
+        "Node name for S&R": "RH_NodeInfoListNode"
+      },
+      "widgets_values": [
+        10,
+        "text",
+        "18"
+      ]
+    },
+    {
+      "id": 80,
+      "type": "RH_WebAppTaskConfigNode",
+      "pos": [
+        2203.769452944498,
+        2345.486565791368
+      ],
+      "size": [
+        354.6232565356604,
+        82
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "nodeInfoList",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": 117
+        }
+      ],
+      "outputs": [
+        {
+          "name": "nodeInfoList",
+          "type": "ARRAY",
+          "links": [
+            148
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "23eaa8587bd09cd4f3b49e9147041498512011ff",
+        "Node name for S&R": "RH_WebAppTaskConfigNode"
+      },
+      "widgets_values": [
+        false,
+        "2000218373092933634"
+      ]
+    },
+    {
+      "id": 83,
+      "type": "TextInput_",
+      "pos": [
+        1416.7879941208319,
+        2340.3999861865077
+      ],
+      "size": [
+        372.5212782806584,
+        166.60961450940613
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            116
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-mixlab-nodes",
+        "ver": "b2bb1876def6330fccf1e03cc69d2166cae7bedb",
+        "Node name for S&R": "TextInput_"
+      },
+      "widgets_values": [
+        "1 个女孩",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 61,
+      "type": "RH_WebAppTaskConfigNode",
+      "pos": [
+        2383.468552824097,
+        1948.3758947433337
+      ],
+      "size": [
+        354.6232565356604,
+        82
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "nodeInfoList",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": 102
+        }
+      ],
+      "outputs": [
+        {
+          "name": "nodeInfoList",
+          "type": "ARRAY",
+          "links": [
+            147
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "23eaa8587bd09cd4f3b49e9147041498512011ff",
+        "Node name for S&R": "RH_WebAppTaskConfigNode"
+      },
+      "widgets_values": [
+        true,
+        "1962440531735351298"
+      ]
+    },
+    {
+      "id": 56,
+      "type": "RH_WebAppTaskConfigNode",
+      "pos": [
+        2021.9284448130925,
+        1279.6028280463736
+      ],
+      "size": [
+        354.6232565356604,
+        82
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "nodeInfoList",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": 91
+        }
+      ],
+      "outputs": [
+        {
+          "name": "nodeInfoList",
+          "type": "ARRAY",
+          "links": [
+            146
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "23eaa8587bd09cd4f3b49e9147041498512011ff",
+        "Node name for S&R": "RH_WebAppTaskConfigNode"
+      },
+      "widgets_values": [
+        false,
+        "1940758802390269954"
+      ]
+    },
+    {
+      "id": 57,
+      "type": "RH_AsyncExtractResultNode",
+      "pos": [
+        3467.9898774632525,
+        784.5868907040011
+      ],
+      "size": [
+        270,
+        138
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "results",
+          "type": "STRUCT",
+          "link": 149
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "video_frames",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            93
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "f1390e177363cc416510a75add0f2c8794bfbff7",
+        "Node name for S&R": "RH_AsyncExtractResultNode"
+      },
+      "widgets_values": [
+        2
+      ]
+    },
+    {
+      "id": 66,
+      "type": "RH_AsyncExtractResultNode",
+      "pos": [
+        3476.1440730215245,
+        1003.8152606620789
+      ],
+      "size": [
+        270,
+        138
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "results",
+          "type": "STRUCT",
+          "link": 104
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            106
+          ]
+        },
+        {
+          "name": "video_frames",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "f1390e177363cc416510a75add0f2c8794bfbff7",
+        "Node name for S&R": "RH_AsyncExtractResultNode"
+      },
+      "widgets_values": [
+        3
+      ]
+    },
+    {
+      "id": 58,
+      "type": "easy showAnything",
+      "pos": [
+        3822.785619197966,
+        901.2547978302822
+      ],
+      "size": [
+        228.11806070628336,
+        234.61250927130936
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 93
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "9947b8be70e17ceabafa4fa7f476b54626de4704",
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "This image appears to depict an illustrated character in a detailed art style. The individual has long, light blonde hair styled into a neatly braided ponytail that extends down their back. The hair features fine linework and shading, giving it a realistic and stylish appearance. The character is wearing a black leather-like aviator-style headband fitted with large, rounded goggles resting on their head, which feature metallic accents with intricate detailing. The lenses of the goggles reflect light, adding depth and texture to the illustration. \n\nThe outfit includes a dark, collared shirt with visible stitching, resembling durable workwear or a fashionable utility shirt. The fabric has a matte appearance and multiple fasteners along the collar. The overall design evokes a vintage or steampunk aesthetic, with an industrial and adventurous vibe, possibly inspired by pilot or mechanic attire. The background is plain beige, ensuring focus remains on the character and their outfit details. The art style leans toward clean lines and subtle shadowing, suggesting modern digital illustration. The precise attention to detail, especially in the accessories and hair, gives this character a charismatic look."
+      ]
+    },
+    {
+      "id": 67,
+      "type": "PreviewImage",
+      "pos": [
+        3801.7919098159277,
+        1189.455540539222
+      ],
+      "size": [
+        371.1492234785869,
+        333.57898551137987
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 106
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 85,
+      "type": "RH_AsyncExtractResultNode",
+      "pos": [
+        3483.9722220493722,
+        1802.1432328406845
+      ],
+      "size": [
+        270,
+        138
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "results",
+          "type": "STRUCT",
+          "link": 122
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "video_frames",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            123
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "f1390e177363cc416510a75add0f2c8794bfbff7",
+        "Node name for S&R": "RH_AsyncExtractResultNode"
+      },
+      "widgets_values": [
+        4
+      ]
+    },
+    {
+      "id": 86,
+      "type": "VAELoader",
+      "pos": [
+        3490.060944434386,
+        2126.4094970191786
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            124
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "ae.sft"
+      ]
+    },
+    {
+      "id": 87,
+      "type": "VAEDecode",
+      "pos": [
+        3839.428995200617,
+        1869.1590317899834
+      ],
+      "size": [
+        140,
+        46
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 123
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 124
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            125
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 88,
+      "type": "SaveImage",
+      "pos": [
+        4063.620704478163,
+        1865.0977109903824
+      ],
+      "size": [
+        325.25338900291354,
+        380.5067780058257
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 125
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 59,
+      "type": "JWImageResizeByLongerSide",
+      "pos": [
+        1699.7091104138751,
+        1692.3270104509322
+      ],
+      "size": [
+        283.5611267089844,
+        82
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 94
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            98
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-various",
+        "ver": "5bd85aaf7616878471469c4ec7e11bbd0cef3bf2",
+        "Node name for S&R": "JWImageResizeByLongerSide"
+      },
+      "widgets_values": [
+        1024,
+        "bicubic"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "RH_ImageUploaderNode",
+      "pos": [
+        1766.6140624715244,
+        696.2256517986033
+      ],
+      "size": [
+        229.20001220703125,
+        46
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "apiConfig",
+          "name": "apiConfig",
+          "type": "STRUCT",
+          "link": 82
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "label": "filename",
+          "name": "filename",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "f0f16c02a2fd8ee80a84a4233713e1fb2f7c516c",
+        "Node name for S&R": "RH_ImageUploaderNode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 1,
+      "type": "RH_NodeInfoListNode",
+      "pos": [
+        2099.650402225226,
+        621.5774853435736
+      ],
+      "size": [
+        215.1985321044922,
+        106
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "previousNodeInfoList",
+          "name": "previousNodeInfoList",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "label": "fieldValue",
+          "name": "fieldValue",
+          "type": "STRING",
+          "widget": {
+            "name": "fieldValue"
+          },
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "label": "ARRAY",
+          "name": "ARRAY",
+          "type": "ARRAY",
+          "links": [
+            85
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "f0f16c02a2fd8ee80a84a4233713e1fb2f7c516c",
+        "Node name for S&R": "RH_NodeInfoListNode"
+      },
+      "widgets_values": [
+        1,
+        "image",
+        "18"
+      ]
+    },
+    {
+      "id": 36,
+      "type": "RH_AsyncBatchExecuteNode",
+      "pos": [
+        2951.5204667571957,
+        797.5556083893382
+      ],
+      "size": [
+        270,
+        1154
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "apiConfig",
+          "type": "STRUCT",
+          "link": 84
+        },
+        {
+          "name": "task_1",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": 141
+        },
+        {
+          "name": "task_2",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": 146
+        },
+        {
+          "name": "task_3",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": 147
+        },
+        {
+          "name": "task_4",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": 148
+        },
+        {
+          "name": "task_5",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_6",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_7",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_8",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_9",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_10",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_11",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_12",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_13",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_14",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_15",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_16",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_17",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_18",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_19",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_20",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_21",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_22",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_23",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_24",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_25",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_26",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_27",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_28",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_29",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_30",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_31",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_32",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_33",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_34",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_35",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_36",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_37",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_38",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_39",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_40",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_41",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_42",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_43",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_44",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_45",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_46",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_47",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_48",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_49",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        },
+        {
+          "name": "task_50",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "results",
+          "type": "STRUCT",
+          "links": [
+            63,
+            104,
+            122,
+            149
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "f1390e177363cc416510a75add0f2c8794bfbff7",
+        "Node name for S&R": "RH_AsyncBatchExecuteNode"
+      },
+      "widgets_values": [
+        50,
+        600,
+        2.5,
+        true,
+        false
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 37,
+      "type": "RH_AsyncExtractResultNode",
+      "pos": [
+        3454.0990062175374,
+        531.8527458947967
+      ],
+      "size": [
+        270,
+        138
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "results",
+          "type": "STRUCT",
+          "link": 63
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            68
+          ]
+        },
+        {
+          "name": "video_frames",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "f1390e177363cc416510a75add0f2c8794bfbff7",
+        "Node name for S&R": "RH_AsyncExtractResultNode"
+      },
+      "widgets_values": [
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 7,
+      "type": "LoadImage",
+      "pos": [
+        1352.773554309732,
+        518.9201773928045
+      ],
+      "size": [
+        290.3871027709981,
+        448.21935670167585
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            7
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "343d08ca1f136ad6e2cb64ecd2bc6947.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "PreviewImage",
+      "pos": [
+        3821.8072749134176,
+        496.44120855180915
+      ],
+      "size": [
+        244.52506957866945,
+        313.6842663665157
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 68
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 54,
+      "type": "RH_WebAppTaskConfigNode",
+      "pos": [
+        2407.743586170767,
+        627.9627985521324
+      ],
+      "size": [
+        279.400390625,
+        82
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "nodeInfoList",
+          "shape": 7,
+          "type": "ARRAY",
+          "link": 85
+        }
+      ],
+      "outputs": [
+        {
+          "name": "nodeInfoList",
+          "type": "ARRAY",
+          "links": [
+            141
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "23eaa8587bd09cd4f3b49e9147041498512011ff",
+        "Node name for S&R": "RH_WebAppTaskConfigNode"
+      },
+      "widgets_values": [
+        false,
+        "2000113906775453698"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 53,
+      "type": "RH_BaseSettingsNode",
+      "pos": [
+        1670.1463790377618,
+        271.1811686217842
+      ],
+      "size": [
+        377.8496635306594,
+        89.0806848380077
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "apiKey",
+          "type": "STRING",
+          "widget": {
+            "name": "apiKey"
+          },
+          "link": 150
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRUCT",
+          "type": "STRUCT",
+          "links": [
+            82,
+            84,
+            89,
+            97
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_RH_APICall",
+        "ver": "23eaa8587bd09cd4f3b49e9147041498512011ff",
+        "Node name for S&R": "RH_BaseSettingsNode"
+      },
+      "widgets_values": [
+        "https://www.runninghub.cn",
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 69,
+      "type": "Note",
+      "pos": [
+        2116.5865949535455,
+        200.08895220801378
+      ],
+      "size": [
+        436.53714991991137,
+        201.71668853961782
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "注册RH，充值RH，实现50并发调用工作流和应用",
+      "properties": {},
+      "widgets_values": [
+        "\n\n通过这个链接注册runninghub，注册送1000积分，可以线上免费用挺久。\n\nhttps://www.runninghub.cn/?inviteCode=rh-v1072\n\n\nAPI KEY 获取地址：\n\nhttps://www.runninghub.cn/enterprise-api/sharedApi?inviteCode=rh-v1072\n\n\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 3,
+      "type": "Note",
+      "pos": [
+        2577.9708460375055,
+        199.71408350942198
+      ],
+      "size": [
+        548.649221501405,
+        207.99135282485236
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "演示调用的：3个工作流 + 1 个应用 的地址链接",
+      "properties": {},
+      "widgets_values": [
+        "\n1、抠图工作流地址：\n\nhttps://www.runninghub.cn/post/2000113906775453698?inviteCode=rh-v1072\n\n2、反推工作流地址：\n\nhttps://www.runninghub.cn/post/1940758802390269954?inviteCode=rh-v1072\n\n3、香蕉编辑图片应用地址：\n\nhttps://www.runninghub.cn/ai-detail/1962440531735351298?inviteCode=rh-v1072\n\n4、Z Image 文生图，本地解码工作流地址：\n\nhttps://www.runninghub.cn/post/2000218373092933634?inviteCode=rh-v1072\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 100,
+      "type": "easy string",
+      "pos": [
+        1398.2503763812354,
+        316.30163063278866
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "links": [
+            150
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "9947b8be70e17ceabafa4fa7f476b54626de4704",
+        "Node name for S&R": "easy string"
+      },
+      "widgets_values": [
+        "填你自己的key"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      4,
+      0,
+      1,
+      1,
+      "STRING"
+    ],
+    [
+      7,
+      7,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      8,
+      8,
+      0,
+      4,
+      1,
+      "IMAGE"
+    ],
+    [
+      63,
+      36,
+      0,
+      37,
+      0,
+      "STRUCT"
+    ],
+    [
+      68,
+      37,
+      0,
+      40,
+      0,
+      "IMAGE"
+    ],
+    [
+      76,
+      49,
+      0,
+      50,
+      0,
+      "IMAGE"
+    ],
+    [
+      77,
+      52,
+      0,
+      51,
+      1,
+      "STRING"
+    ],
+    [
+      79,
+      50,
+      0,
+      52,
+      1,
+      "IMAGE"
+    ],
+    [
+      82,
+      53,
+      0,
+      4,
+      0,
+      "STRUCT"
+    ],
+    [
+      84,
+      53,
+      0,
+      36,
+      0,
+      "STRUCT"
+    ],
+    [
+      85,
+      1,
+      0,
+      54,
+      0,
+      "ARRAY"
+    ],
+    [
+      89,
+      53,
+      0,
+      52,
+      0,
+      "STRUCT"
+    ],
+    [
+      91,
+      51,
+      0,
+      56,
+      0,
+      "ARRAY"
+    ],
+    [
+      93,
+      57,
+      3,
+      58,
+      0,
+      "*"
+    ],
+    [
+      94,
+      63,
+      0,
+      59,
+      0,
+      "IMAGE"
+    ],
+    [
+      95,
+      62,
+      0,
+      60,
+      1,
+      "STRING"
+    ],
+    [
+      97,
+      53,
+      0,
+      62,
+      0,
+      "STRUCT"
+    ],
+    [
+      98,
+      59,
+      0,
+      62,
+      1,
+      "IMAGE"
+    ],
+    [
+      101,
+      60,
+      0,
+      64,
+      0,
+      "ARRAY"
+    ],
+    [
+      102,
+      64,
+      0,
+      61,
+      0,
+      "ARRAY"
+    ],
+    [
+      103,
+      65,
+      0,
+      64,
+      1,
+      "STRING"
+    ],
+    [
+      104,
+      36,
+      0,
+      66,
+      0,
+      "STRUCT"
+    ],
+    [
+      106,
+      66,
+      0,
+      67,
+      0,
+      "IMAGE"
+    ],
+    [
+      116,
+      83,
+      0,
+      79,
+      1,
+      "STRING"
+    ],
+    [
+      117,
+      79,
+      0,
+      80,
+      0,
+      "ARRAY"
+    ],
+    [
+      122,
+      36,
+      0,
+      85,
+      0,
+      "STRUCT"
+    ],
+    [
+      123,
+      85,
+      2,
+      87,
+      0,
+      "LATENT"
+    ],
+    [
+      124,
+      86,
+      0,
+      87,
+      1,
+      "VAE"
+    ],
+    [
+      125,
+      87,
+      0,
+      88,
+      0,
+      "IMAGE"
+    ],
+    [
+      141,
+      54,
+      0,
+      36,
+      1,
+      "ARRAY"
+    ],
+    [
+      146,
+      56,
+      0,
+      36,
+      2,
+      "ARRAY"
+    ],
+    [
+      147,
+      61,
+      0,
+      36,
+      3,
+      "ARRAY"
+    ],
+    [
+      148,
+      80,
+      0,
+      36,
+      4,
+      "ARRAY"
+    ],
+    [
+      149,
+      36,
+      0,
+      57,
+      0,
+      "STRUCT"
+    ],
+    [
+      150,
+      100,
+      0,
+      53,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "1、调用 RH 抠图工作流.",
+      "bounding": [
+        1331.1613132309567,
+        421.15872077185435,
+        1462.0994335023115,
+        584.2724370549411
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "runninghub api key",
+      "bounding": [
+        1331.9976135988331,
+        166.53229463438234,
+        756.1985824099911,
+        242.97397672416056
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "2、调用 RH 反推工作流",
+      "bounding": [
+        1336.2739294306025,
+        1021.3149607146029,
+        1450.8699931891374,
+        552.8694683218937
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "3、调用 RH 香蕉app 编辑 的应用",
+      "bounding": [
+        1339.8891843885115,
+        1595.0033240853397,
+        1454.642217273953,
+        541.9918527654729
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "4、调用Z Imag 文生图，本地解码工作流",
+      "bounding": [
+        1335.683977873842,
+        2158.309510113291,
+        1464.3689284578284,
+        517.7865358673075
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "本地解码",
+      "bounding": [
+        3447.0470182102217,
+        1700.6659769702444,
+        1078.4777221906652,
+        715.5741322041274
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "根据任务提取结果",
+      "bounding": [
+        3444.0990062175374,
+        411.43769481334925,
+        1082.0889723144614,
+        1263.1474033699033
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 9,
+      "title": "异步并发执行节点",
+      "bounding": [
+        2898.1111671495496,
+        658.8416589778699,
+        393.51448367977036,
+        1341.1144836797703
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 10,
+      "title": "sharedApi-key",
+      "bounding": [
+        1379.5452109496307,
+        223.35681856255397,
+        250.3120526737464,
+        170.13359780359607
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.1671841070450495,
+      "offset": [
+        -1061.453543763501,
+        -85.14398676495527
+      ]
+    },
+    "frontendVersion": "1.30.6",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
